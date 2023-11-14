@@ -1,6 +1,18 @@
 <script setup>
+import { computed, inject } from 'vue'
 import Navbar from './components/NavbarComponent.vue'
 import TimedGreeting from './components/TimedGreeting.vue'
+import { useWordpressStore } from '@/stores/wordpress'
+
+const $axios = inject('$axios')
+const wordpress = useWordpressStore()
+
+wordpress.fetchProjects($axios)
+wordpress.fetchTestamonials($axios)
+wordpress.fetchServices($axios)
+
+const projects = computed(() => wordpress.projects)
+const testimonials = computed(() => wordpress.testimonials)
 </script>
 
 <template>
@@ -98,66 +110,21 @@ import TimedGreeting from './components/TimedGreeting.vue'
         <section id="portfolio">
             <h2>Showcase of My Web Development Projects</h2>
 
-            <h3>Nature's Releaf™</h3>
-
-            <h3>Clarity Connection</h3>
-
-            <h3>Morphosys.io</h3>
-
-            <h3>Financial Risk Group</h3>
-
-            <h3>Paramount</h3>
-
-            <h3>Captain Bonny's Plantery</h3>
+            <div v-for="project in projects" :key="project.id">
+                <h3>{{ project.title.rendered }}</h3>
+            </div>
         </section>
 
         <section>
             <h2>Client Testimonials: Hear What They Say</h2>
 
-            <figure>
+            <figure v-for="testimonial in testimonials" :key="testimonial.id">
                 <blockquote class="blockquote">
                     <p>
-                        This was my first experience partnering with a technical expert to bring my
-                        "artistic" vision to life. I provided a broad overview of what I thought I
-                        wanted and Jonathan and I began the journey of creating my website. Jonathan
-                        iterated on the look and feel and technical parts until we got to the "this
-                        is exactly what I wanted" place. Jonathan was patient and supportive and
-                        engaged during the entire time we worked together. I hoped to find a
-                        long-term technical partner for my business and I feel super lucky to have
-                        found Jonathan right away.
+                        {{ testimonial.content.rendered }}
                     </p>
                 </blockquote>
-                <figcaption class="blockquote-footer">Denise</figcaption>
-            </figure>
-            <figure>
-                <blockquote class="blockquote">
-                    <p>
-                        Jon was fabulous, and we will be acquiring his services in the near future
-                        to continue with the work on our website and app. He went beyond and did an
-                        amazing job.
-                    </p>
-                </blockquote>
-                <figcaption class="blockquote-footer">David</figcaption>
-            </figure>
-            <figure>
-                <blockquote class="blockquote">
-                    <p>
-                        Excellent communication and very patient with clients. Very easy to work
-                        with.
-                    </p>
-                </blockquote>
-                <figcaption class="blockquote-footer">Jim</figcaption>
-            </figure>
-            <figure>
-                <blockquote class="blockquote">
-                    <p>
-                        I highly recommend working with Jon! He built Captain Bonny's Plantery
-                        website better than I could have imagined. If you are looking for someone
-                        who will truly listen to your vision, is detail oriented, and executes
-                        flawlessly - he's your guy.
-                    </p>
-                </blockquote>
-                <figcaption class="blockquote-footer">Sabrina</figcaption>
+                <figcaption class="blockquote-footer">{{ testimonial.title.rendered }}</figcaption>
             </figure>
         </section>
 
@@ -184,12 +151,12 @@ import TimedGreeting from './components/TimedGreeting.vue'
                 let's bring your ideas to life.</span
             >
 
-			<form action="submit">
-				<input type="text" name="name" placeholder="Name">
-				<input type="email" name="email" placeholder="Email">
-				<textarea name="message" cols="30" rows="10" placeholder="Message"></textarea>
-				<button type="submit">Send</button>
-			</form>
+            <form action="submit">
+                <input type="text" name="name" placeholder="Name" />
+                <input type="email" name="email" placeholder="Email" />
+                <textarea name="message" cols="30" rows="10" placeholder="Message"></textarea>
+                <button type="submit">Send</button>
+            </form>
         </section>
     </main>
 </template>
