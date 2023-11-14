@@ -12,7 +12,7 @@ const services = computed(() => wordpress.services)
 
 <template>
     <section id="services">
-        <h2>Professional Web Development & Technical SEO Services</h2>
+        <h2>{{  }}</h2>
         <div v-for="service in services" :key="service.id">
             <h3>{{ service.title.rendered }}</h3>
             <span v-html="service.content.rendered"></span>

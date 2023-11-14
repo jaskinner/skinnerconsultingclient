@@ -5,6 +5,7 @@ export const useWordpressStore = defineStore('wordpress', {
 		projects: [],
 		testimonials: [],
 		services: [],
+		pages: [],
 		isLoading: false,
 		error: null
 	}),

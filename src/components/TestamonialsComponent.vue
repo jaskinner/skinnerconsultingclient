@@ -1,6 +1,7 @@
 <script setup>
 import { computed, inject } from 'vue'
 import { useWordpressStore } from '@/stores/wordpress'
+import QuoteComponent from './QuoteComponent.vue'
 
 const $axios = inject('$axios')
 const wordpress = useWordpressStore()
@@ -14,9 +15,11 @@ const testimonials = computed(() => wordpress.testimonials)
     <section id="testamonials">
         <h2>Client Testimonials: Hear What They Say</h2>
 
-        <figure v-for="testimonial in testimonials" :key="testimonial.id">
-            <blockquote class="blockquote" v-html="testimonial.content.rendered"></blockquote>
-            <figcaption class="blockquote-footer">{{ testimonial.title.rendered }}</figcaption>
-        </figure>
+        <QuoteComponent
+            v-for="testamonial in testimonials"
+            :key="testamonial.id"
+            :quote="testamonial.acf.quote"
+            :attr="testamonial.acf.attribution"
+        />
     </section>
 </template>

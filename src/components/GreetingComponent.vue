@@ -1,15 +1,15 @@
+<script setup>
+import QuoteComponent from './QuoteComponent.vue'
+</script>
+
 <template>
     <section id="greeting">
         <h2>Empowering Your Online Journey with Expert Knowledge and Client-Centric Guidance</h2>
-        <figure>
-            <blockquote class="blockquote">
-                <p>Whatever cannot be said clearly is probably not being thought clearly either.</p>
-            </blockquote>
-            <figcaption class="blockquote-footer">
-                Peter Singer in
-                <cite title="Ethics in the Real World">Ethics in the Real World</cite>
-            </figcaption>
-        </figure>
+        <QuoteComponent
+            quote="Whatever cannot be said clearly is probably not being thought clearly either."
+            attr="Peter Singer"
+            citation="Ethics in the Real World"
+        />
         <p>
             Bringing a wealth of knowledge in web development and WordPress to the table, I am
             dedicated to demystifying the digital world for my clients. My approach is rooted in the
