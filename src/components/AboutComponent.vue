@@ -1,14 +1,19 @@
 <script setup>
-import { inject } from 'vue'
+import { useWordpressStore } from '@/stores/wordpress'
+import { computed } from 'vue'
 
-const $axios = inject('$axios')
+const wordpress = useWordpressStore()
 
+const pages = computed(() => wordpress.pages)
 
+const page = computed(() => {
+    return pages.value.find(page => page.slug === 'about')
+})
 </script>
 
 <template>
-    <section id="about">
-        <h2></h2>
-        <p></p>
+    <section id="about" v-if="page">
+        <h2>{{ page.acf.heading }}</h2>
+        <p>{{ page.acf.body }}</p>
     </section>
 </template>

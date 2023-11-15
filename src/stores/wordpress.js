@@ -19,9 +19,9 @@ export const useWordpressStore = defineStore('wordpress', {
 				console.log(error)
 			}
 		},
-		async fetchTestamonials($axios) {
+		async fetchTestimonials($axios) {
 			try {
-				const { data } = await $axios.get('/testamonial');
+				const { data } = await $axios.get('/testimonial');
 
 				this.testimonials = data
 			} catch (error) {
@@ -36,6 +36,15 @@ export const useWordpressStore = defineStore('wordpress', {
 			} catch (error) {
 				console.log(error)
 			}
-		}
+		},
+		async fetchPages($axios) {
+			try {
+				const { data } = await $axios.get('/pages');
+
+				this.pages = data
+			} catch (error) {
+				console.log(error)
+			}
+		},
 	}
 })

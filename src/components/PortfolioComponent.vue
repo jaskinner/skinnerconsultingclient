@@ -8,11 +8,17 @@ const wordpress = useWordpressStore()
 wordpress.fetchProjects($axios)
 
 const projects = computed(() => wordpress.projects)
+
+const pages = computed(() => wordpress.pages)
+
+const page = computed(() => {
+    return pages.value.find((page) => page.slug === 'portfolio')
+})
 </script>
 
 <template>
-    <section id="portfolio">
-        <h2>Showcase of My Web Development Projects</h2>
+    <section id="portfolio" v-if="page">
+        <h2>{{ page.acf.heading }}</h2>
 
         <div v-for="project in projects" :key="project.id">
             <h3 v-html="project.title.rendered"></h3>

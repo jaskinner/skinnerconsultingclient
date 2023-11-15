@@ -1,12 +1,20 @@
-<script setup></script>
+<script setup>
+import { useWordpressStore } from '@/stores/wordpress'
+import { computed } from 'vue'
+
+const wordpress = useWordpressStore()
+
+const pages = computed(() => wordpress.pages)
+
+const page = computed(() => {
+    return pages.value.find((page) => page.slug === 'contact')
+})
+</script>
 
 <template>
-    <section id="contact">
-        <h2>Ready to Elevate Your Project? Let's Connect!</h2>
-        <p>
-            Have a project in mind or need expert advice? I'm here to help. Contact me and let's
-            bring your ideas to life.
-        </p>
+    <section id="contact" v-if="page">
+        <h2>{{ page.acf.heading }}</h2>
+        <p>{{ page.acf.body }}</p>
 
         <form action="submit">
             <input type="text" name="name" placeholder="Name" />
