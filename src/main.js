@@ -9,7 +9,7 @@ import './assets/scss/styles.scss'
 import 'bootstrap';
 
 const instance = axios.create({
-	baseURL: 'https://skinnerconsultingwp:8890/wp-json/wp/v2',
+	baseURL: 'https://local.skinnerconsulting.tech:8890/wp-json/wp/v2',
 	timeout: 1000,
 	headers: { 'Content-Type': 'application/json' }
 });

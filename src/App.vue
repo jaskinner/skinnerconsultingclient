@@ -1,5 +1,5 @@
 <script setup>
-import NavbarComponent from './components/NavbarComponent.vue'
+// import NavbarComponent from './components/NavbarComponent.vue'
 import TestimonialsComponent from './components/TestimonialsComponent.vue'
 import GreetingComponent from './components/GreetingComponent.vue'
 import ContactComponent from './components/ContactComponent.vue'
@@ -15,10 +15,11 @@ const $axios = inject('$axios')
 const wordpress = useWordpressStore()
 
 wordpress.fetchPages($axios)
+wordpress.fetchMedia($axios)
 </script>
 
 <template>
-    <NavbarComponent />
+    <!-- <NavbarComponent /> -->
     <main>
         <HeroComponent />
 

@@ -1,0 +1,29 @@
+$bootstrap-icons-font-src:
+    url('bootstrap-icons/font/fonts/bootstrap-icons.woff2') format('woff2'),
+    url('../../node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff') format('woff');
+
+$font-family-sans-serif: 'Open Sans', sans-serif;
+$headings-font-family: 'Lato', serif;
+$font-weight-bold: 900;
+$font-size-base: 1rem !default; // Assumes the browser default, typically `16px`
+
+$h1-font-size: $font-size-base * 2;
+// $h2-font-size:                $font-size-base * 2;
+// $h3-font-size:                $font-size-base * 1.75;
+// $h4-font-size:                $font-size-base * 1.5;
+// $h5-font-size:                $font-size-base * 1.25;
+// $h6-font-size:                $font-size-base;
+
+// scss-docs-start border-radius-variables
+$border-radius: 0;
+$border-radius-sm: 0;
+$border-radius-lg: 0;
+$border-radius-xl: 0;
+$border-radius-xxl: 0;
+$border-radius-pill: 0;
+// scss-docs-end border-radius-variables
+
+// scss-docs-start input-btn-variables
+$input-btn-padding-y: 1rem;
+$input-btn-padding-x: 1.75rem;
+// scss-docs-end input-btn-variables

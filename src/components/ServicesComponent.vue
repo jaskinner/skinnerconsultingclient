@@ -22,6 +22,7 @@ const page = computed(() => {
         <div class="row row-gap-3">
             <div class="col-md-4" v-for="service in services" :key="service.id">
                 <div class="card">
+                    <div class="card-img-top text-center px-5 py-3" v-html="service.acf.icon"></div>
                     <div class="card-body">
                         <h3 class="card-title">{{ service.acf.title }}</h3>
                         <p class="card-text">{{ service.acf.description }}</p>

@@ -13,8 +13,23 @@ const page = computed(() => {
 </script>
 
 <template>
-    <section id="hero" class="container" v-if="page">
-        <h1><TimedGreeting />{{ page.acf.heading }}</h1>
-        <p>{{ page.acf.body }}</p>
-    </section>
+    <header id="hero" class="container-fluid py-5 text-light" v-if="page">
+        <div class="d-flex flex-column mx-5">
+            <h1 class="fw-bold lh-base"><TimedGreeting />{{ page.acf.heading }}</h1>
+            <p class="lh-lg">{{ page.acf.body }}</p>
+            <div>
+                <button class="btn btn-light mt-3">
+                    Get a free quote
+                    <i class="bi bi-arrow-right-short"></i>
+                </button>
+                <button class="btn mt-3">My Portfolio</button>
+            </div>
+        </div>
+    </header>
 </template>
+
+<style lang="scss" scoped>
+#hero {
+    background-color: #0054ff;
+}
+</style>
