@@ -17,11 +17,17 @@ const page = computed(() => {
 </script>
 
 <template>
-    <section id="services" v-if="page">
+    <section id="services" class="container" v-if="page">
         <h2>{{ page.acf.heading }}</h2>
-        <div v-for="service in services" :key="service.id">
-            <h3>{{ service.title.rendered }}</h3>
-            <span v-html="service.content.rendered"></span>
+        <div class="row row-gap-3">
+            <div class="col-md-4" v-for="service in services" :key="service.id">
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title">{{ service.acf.title }}</h3>
+                        <p class="card-text">{{ service.acf.description }}</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 </template>

@@ -18,7 +18,7 @@ const page = computed(() => {
 </script>
 
 <template>
-    <section id="testimonials" v-if="page">
+    <section id="testimonials" class="container" v-if="page">
         <h2>{{ page.acf.heading }}</h2>
 
         <QuoteComponent

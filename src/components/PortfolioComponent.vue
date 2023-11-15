@@ -17,12 +17,22 @@ const page = computed(() => {
 </script>
 
 <template>
-    <section id="portfolio" v-if="page">
+    <section id="portfolio" class="container" v-if="page">
         <h2>{{ page.acf.heading }}</h2>
 
-        <div v-for="project in projects" :key="project.id">
-            <h3 v-html="project.title.rendered"></h3>
-            <a :href="project.acf.project_link">Visit</a>
+        <div
+            class="row mb-3"
+            :class="{ 'flex-row-reverse': index % 2 !== 0 }"
+            v-for="(project, index) in projects"
+            :key="project.id"
+        >
+            <div
+                class="col-md-6 text-center d-flex flex-column justify-content-around align-items-center"
+            >
+                <h3 v-html="project.title.rendered"></h3>
+                <a class="btn btn-primary flex-shrink-1" :href="project.acf.project_link">Visit</a>
+            </div>
+            <div class="col-md-6">image</div>
         </div>
     </section>
 </template>

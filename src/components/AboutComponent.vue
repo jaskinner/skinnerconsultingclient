@@ -12,7 +12,7 @@ const page = computed(() => {
 </script>
 
 <template>
-    <section id="about" v-if="page">
+    <section id="about" class="container" v-if="page">
         <h2>{{ page.acf.heading }}</h2>
         <p>{{ page.acf.body }}</p>
     </section>

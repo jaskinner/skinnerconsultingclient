@@ -13,7 +13,7 @@ const page = computed(() => {
 </script>
 
 <template>
-    <section id="greeting" v-if="page">
+    <section id="greeting" class="container" v-if="page">
         <h2>{{ page.acf.heading }}</h2>
         <QuoteComponent
             quote="Whatever cannot be said clearly is probably not being thought clearly either."

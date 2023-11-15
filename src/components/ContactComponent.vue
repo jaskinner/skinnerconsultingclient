@@ -12,15 +12,32 @@ const page = computed(() => {
 </script>
 
 <template>
-    <section id="contact" v-if="page">
-        <h2>{{ page.acf.heading }}</h2>
-        <p>{{ page.acf.body }}</p>
-
-        <form action="submit">
-            <input type="text" name="name" placeholder="Name" />
-            <input type="email" name="email" placeholder="Email" />
-            <textarea name="message" cols="30" rows="10" placeholder="Message"></textarea>
-            <button type="submit">Send</button>
-        </form>
+    <section id="contact" class="container" v-if="page">
+        <div class="row">
+            <div class="col-md-6">
+                <h2>{{ page.acf.heading }}</h2>
+                <p>{{ page.acf.body }}</p>
+            </div>
+            <div class="col-md-6">
+                <form action="submit">
+                    <div class="mb-3">
+                        <input class="form-control" type="text" name="name" placeholder="Name" />
+                    </div>
+                    <div class="mb-3">
+                        <input class="form-control" type="email" name="email" placeholder="Email" />
+                    </div>
+                    <div class="mb-3">
+                        <textarea
+                            class="form-control"
+                            name="message"
+                            cols="30"
+                            rows="10"
+                            placeholder="Message"
+                        ></textarea>
+                    </div>
+                    <button class="btn btn-primary" type="submit">Send</button>
+                </form>
+            </div>
+        </div>
     </section>
 </template>

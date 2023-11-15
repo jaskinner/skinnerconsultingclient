@@ -13,7 +13,7 @@ const page = computed(() => {
 </script>
 
 <template>
-    <section id="hero" v-if="page">
+    <section id="hero" class="container" v-if="page">
         <h1><TimedGreeting />{{ page.acf.heading }}</h1>
         <p>{{ page.acf.body }}</p>
     </section>
