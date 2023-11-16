@@ -38,7 +38,7 @@ function getMediaItem(id) {
                     <img
                         class="img-fluid"
                         :src="
-                            'https://local.skinnerconsulting.tech:8890/wp-content/uploads/' +
+                            'http://db.skinnerconsulting.tech/wp-content/uploads/' +
                             getMediaItem(project.acf.brand)
                         "
                         alt=""
