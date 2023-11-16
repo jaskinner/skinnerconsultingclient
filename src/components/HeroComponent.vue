@@ -34,7 +34,7 @@ const page = computed(() => {
             </div>
         </div>
         <div id="hero-bottom">
-            <img class="img-fluid" src="../assets/images/triangle-hero.svg" alt="" />
+            <img width="1920" height="444" class="img-fluid" src="../assets/images/triangle-hero.svg" alt="" />
         </div>
     </header>
 </template>

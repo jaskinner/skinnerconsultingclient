@@ -36,13 +36,17 @@ function getMediaItem(id) {
             >
                 <div class="col-md-6 mt-3 text-center" v-if="media">
                     <img
-                        class="img-fluid"
+                        v-if="getMediaItem(project.acf.brand)"
                         :src="
-                            'http://db.skinnerconsulting.tech/wp-content/uploads/' +
+                            'https://db.skinnerconsulting.tech/wp-content/uploads/' +
                             getMediaItem(project.acf.brand)
                         "
                         alt=""
+                        class="img-fluid"
+                        width="888"
+                        height="482"
                     />
+                    <div v-else>No image available</div>
                 </div>
                 <div
                     class="col-md-6 mt-3 text-center d-flex flex-column justify-content-center align-items-center"

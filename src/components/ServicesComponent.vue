@@ -24,11 +24,12 @@ const page = computed(() => {
                 <div class="col-md-4" v-for="service in services" :key="service.id">
                     <div class="card">
                         <div
+                            role="button"
                             class="card-body"
                             data-bs-toggle="collapse"
                             :data-bs-target="'#card' + service.id"
                             aria-expanded="false"
-                            :aria-controls="'#card' + service.id"
+                            :aria-controls="'card' + service.id"
                         >
                             <h3
                                 class="card-title d-flex justify-content-between mb-0 text-uppercase"

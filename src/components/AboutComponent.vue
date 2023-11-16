@@ -17,7 +17,7 @@ const page = computed(() => {
             <h2 class="text-uppercase text-primary mb-5">{{ page.acf.heading }}</h2>
             <div class="d-flex flex-row flex-wrap flex-md-nowrap flex-md-row-reverse gap-5">
                 <p>{{ page.acf.body }}</p>
-                <img src="../assets/images/portrait.jpg" class="img-fluid mb-3" alt="" />
+                <img width="317" height="317" src="../assets/images/portrait.jpg" class="img-fluid mb-3" alt="" />
             </div>
             <div>
                 <div
