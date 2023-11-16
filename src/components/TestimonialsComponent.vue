@@ -18,14 +18,16 @@ const page = computed(() => {
 </script>
 
 <template>
-    <section id="testimonials" class="container" v-if="page">
-        <h2>{{ page.acf.heading }}</h2>
+    <section id="testimonials" class="container-fluid py-5" v-if="page">
+        <div class="mx-5">
+            <h2 class="text-uppercase text-primary mb-3">{{ page.acf.heading }}</h2>
 
-        <QuoteComponent
-            v-for="testimonial in testimonials"
-            :key="testimonial.id"
-            :quote="testimonial.acf.quote"
-            :attr="testimonial.acf.attribution"
-        />
+            <QuoteComponent
+                v-for="testimonial in testimonials"
+                :key="testimonial.id"
+                :quote="testimonial.acf.quote"
+                :attr="testimonial.acf.attribution"
+            />
+        </div>
     </section>
 </template>

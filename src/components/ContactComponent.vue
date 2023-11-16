@@ -12,10 +12,10 @@ const page = computed(() => {
 </script>
 
 <template>
-    <section id="contact" class="container" v-if="page">
-        <div class="row">
+    <section id="contact" class="container-fluid py-5" v-if="page">
+        <div class="row mx-5">
             <div class="col-md-6">
-                <h2>{{ page.acf.heading }}</h2>
+                <h2 class="text-uppercase text-primary mb-3">{{ page.acf.heading }}</h2>
                 <p>{{ page.acf.body }}</p>
             </div>
             <div class="col-md-6">

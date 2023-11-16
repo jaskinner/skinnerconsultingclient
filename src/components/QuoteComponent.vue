@@ -9,7 +9,7 @@ const props = defineProps({
 <template>
     <figure>
         <blockquote class="blockquote">
-            <p>{{ props.quote }}</p>
+            <p class="fs-6 fst-italic">{{ props.quote }}</p>
         </blockquote>
         <figcaption class="blockquote-footer">
             {{ props.attr }} <span v-if="props.citation">in </span>

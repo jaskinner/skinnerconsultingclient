@@ -13,23 +13,22 @@ const page = computed(() => {
 </script>
 
 <template>
-    <header id="hero" class="container-fluid py-5 text-light" v-if="page">
-        <div class="d-flex flex-column mx-5">
+    <header id="hero" class="container-fluid py-5 text-light bg-primary" v-if="page">
+        <div id="hero-top" class="d-flex flex-column mx-5">
             <h1 class="fw-bold lh-base"><TimedGreeting />{{ page.acf.heading }}</h1>
             <p class="lh-lg">{{ page.acf.body }}</p>
             <div>
-                <button class="btn btn-light mt-3">
+                <button class="btn btn-light mt-3 text-uppercase text-primary">
                     Get a free quote
                     <i class="bi bi-arrow-right-short"></i>
                 </button>
-                <button class="btn mt-3">My Portfolio</button>
+                <button class="btn mt-3 text-uppercase text-uppercase text-light border border-2">
+                    My Portfolio <i class="bi bi-arrow-right-short"></i>
+                </button>
             </div>
+        </div>
+        <div id="hero-bottom">
+            <img src="../assets/images" alt="" />
         </div>
     </header>
 </template>
-
-<style lang="scss" scoped>
-#hero {
-    background-color: #0054ff;
-}
-</style>

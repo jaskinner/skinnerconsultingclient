@@ -24,36 +24,38 @@ function getMediaItem(id) {
 </script>
 
 <template>
-    <section id="portfolio" class="container" v-if="page">
-        <h2>{{ page.acf.heading }}</h2>
+    <section id="portfolio" class="container-fluid py-5" v-if="page">
+        <div class="mx-5">
+            <h2 class="text-uppercase text-primary mb-3">{{ page.acf.heading }}</h2>
 
-        <div
-            class="row mb-3 p-5"
-            :class="{ 'flex-md-row-reverse': index % 2 !== 0 }"
-            v-for="(project, index) in projects"
-            :key="project.id"
-        >
-            <div class="col-md-6 p-5 text-center" v-if="media">
-                <img
-                    class="img-fluid"
-                    :src="
-                        'https://local.skinnerconsulting.tech:8890/wp-content/uploads/' +
-                        getMediaItem(project.acf.brand)
-                    "
-                    alt=""
-                />
-            </div>
             <div
-                class="col-md-6 p-5 text-center d-flex flex-column justify-content-center align-items-center"
+                class="row mb-3"
+                :class="{ 'flex-md-row-reverse': index % 2 !== 0 }"
+                v-for="(project, index) in projects"
+                :key="project.id"
             >
-                <h3 v-html="project.title.rendered"></h3>
-                <a
-                    class="btn btn-primary flex-shrink-1"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    :href="project.acf.project_link"
-                    >Visit<span class="sr-only visually-hidden">(opens in new tab)</span></a
+                <div class="col-md-6 mt-3 text-center" v-if="media">
+                    <img
+                        class="img-fluid"
+                        :src="
+                            'https://local.skinnerconsulting.tech:8890/wp-content/uploads/' +
+                            getMediaItem(project.acf.brand)
+                        "
+                        alt=""
+                    />
+                </div>
+                <div
+                    class="col-md-6 mt-3 text-center d-flex flex-column justify-content-center align-items-center"
                 >
+                    <h3 v-html="project.title.rendered"></h3>
+                    <a
+                        class="btn btn-primary flex-shrink-1"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        :href="project.acf.project_link"
+                        >Visit<span class="sr-only visually-hidden">(opens in new tab)</span></a
+                    >
+                </div>
             </div>
         </div>
     </section>

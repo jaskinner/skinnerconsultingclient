@@ -6,7 +6,6 @@ export const useWordpressStore = defineStore('wordpress', {
 		testimonials: [],
 		services: [],
 		pages: [],
-		media: [],
 		isLoading: false,
 		error: null
 	}),
@@ -43,15 +42,6 @@ export const useWordpressStore = defineStore('wordpress', {
 				const { data } = await $axios.get('/pages');
 
 				this.pages = data
-			} catch (error) {
-				console.log(error)
-			}
-		},
-		async fetchMedia($axios) {
-			try {
-				const { data } = await $axios.get('/media');
-
-				this.media = data
 			} catch (error) {
 				console.log(error)
 			}

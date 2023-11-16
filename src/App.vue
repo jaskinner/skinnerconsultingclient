@@ -15,7 +15,6 @@ const $axios = inject('$axios')
 const wordpress = useWordpressStore()
 
 wordpress.fetchPages($axios)
-wordpress.fetchMedia($axios)
 </script>
 
 <template>
