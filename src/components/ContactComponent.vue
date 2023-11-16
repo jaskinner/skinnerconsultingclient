@@ -12,10 +12,10 @@ const page = computed(() => {
 </script>
 
 <template>
-    <section id="contact" class="container-fluid py-5" v-if="page">
+    <section id="contact" class="container-fluid py-5 bg-dark text-light" v-if="page">
         <div class="row mx-5">
             <div class="col-md-6">
-                <h2 class="text-uppercase text-primary mb-3">{{ page.acf.heading }}</h2>
+                <h2 class="text-uppercase mb-5">{{ page.acf.heading }}</h2>
                 <p>{{ page.acf.body }}</p>
             </div>
             <div class="col-md-6">
@@ -35,7 +35,12 @@ const page = computed(() => {
                             placeholder="Message"
                         ></textarea>
                     </div>
-                    <button class="btn btn-primary" type="submit">Send</button>
+                    <button
+                        class="btn mt-3 text-uppercase text-uppercase text-light border border-2"
+                        type="submit"
+                    >
+                        Send <i class="bi bi-envelope ps-2"></i>
+                    </button>
                 </form>
             </div>
         </div>

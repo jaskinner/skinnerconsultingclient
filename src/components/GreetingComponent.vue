@@ -15,13 +15,17 @@ const page = computed(() => {
 <template>
     <section id="greeting" class="container-fluid py-5" v-if="page">
         <div class="mx-5">
-            <h2 class="text-uppercase text-primary mb-3">{{ page.acf.heading }}</h2>
-            <QuoteComponent
-                quote="Whatever cannot be said clearly is probably not being thought clearly either."
-                attr="Peter Singer"
-                citation="Ethics in the Real World"
-            />
-            <p><small>{{ page.acf.body }}</small></p>
+            <h2 class="text-uppercase text-primary mb-5">{{ page.acf.heading }}</h2>
+            <p class="mx-3">
+                <QuoteComponent
+                    quote="Whatever cannot be said clearly is probably not being thought clearly either."
+                    attr="Peter Singer"
+                    citation="Ethics in the Real World"
+                />
+			</p>
+            <p>
+                <small>{{ page.acf.body }}</small>
+            </p>
         </div>
     </section>
 </template>

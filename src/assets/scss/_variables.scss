@@ -11,7 +11,7 @@ $font-size-base: 1rem !default; // Assumes the browser default, typically `16px`
 
 $h1-font-size: $font-size-base * 2;
 $h2-font-size:                $font-size-base;
-// $h3-font-size:                $font-size-base * 1.75;
+$h3-font-size:                $font-size-base * .8;
 // $h4-font-size:                $font-size-base * 1.5;
 // $h5-font-size:                $font-size-base * 1.25;
 // $h6-font-size:                $font-size-base;
@@ -30,3 +30,5 @@ $input-btn-padding-y: 1rem;
 $input-btn-padding-x: 1.75rem;
 $btn-font-weight: 600;
 // scss-docs-end input-btn-variables
+
+$blockquote-footer-color: #f7f7f7;

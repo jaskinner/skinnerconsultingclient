@@ -26,7 +26,7 @@ function getMediaItem(id) {
 <template>
     <section id="portfolio" class="container-fluid py-5" v-if="page">
         <div class="mx-5">
-            <h2 class="text-uppercase text-primary mb-3">{{ page.acf.heading }}</h2>
+            <h2 class="text-uppercase text-primary mb-5">{{ page.acf.heading }}</h2>
 
             <div
                 class="row mb-3"

@@ -18,9 +18,9 @@ const page = computed(() => {
 </script>
 
 <template>
-    <section id="testimonials" class="container-fluid py-5" v-if="page">
+    <section id="testimonials" class="container-fluid py-5 text-light bg-primary" v-if="page">
         <div class="mx-5">
-            <h2 class="text-uppercase text-primary mb-3">{{ page.acf.heading }}</h2>
+            <h2 class="text-uppercase mb-5">{{ page.acf.heading }}</h2>
 
             <QuoteComponent
                 v-for="testimonial in testimonials"

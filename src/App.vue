@@ -1,7 +1,7 @@
 <script setup>
 // import NavbarComponent from './components/NavbarComponent.vue'
 import TestimonialsComponent from './components/TestimonialsComponent.vue'
-import GreetingComponent from './components/GreetingComponent.vue'
+// import GreetingComponent from './components/GreetingComponent.vue'
 import ContactComponent from './components/ContactComponent.vue'
 import HeroComponent from './components/HeroComponent.vue'
 import PortfolioComponent from './components/PortfolioComponent.vue'
@@ -15,6 +15,7 @@ const $axios = inject('$axios')
 const wordpress = useWordpressStore()
 
 wordpress.fetchPages($axios)
+wordpress.fetchMedia($axios)
 </script>
 
 <template>
@@ -22,7 +23,7 @@ wordpress.fetchPages($axios)
     <main>
         <HeroComponent />
 
-        <GreetingComponent />
+        <!-- <GreetingComponent /> -->
 
         <ServicesComponent />
 
