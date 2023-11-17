@@ -16,7 +16,7 @@ onMounted(() => {
 const $axios = inject('$axios')
 const wordpress = useWordpressStore()
 
-wordpress.fetchServices($axios)
+wordpress.fetchData($axios, 'services')
 
 const services = computed(() => wordpress.services)
 

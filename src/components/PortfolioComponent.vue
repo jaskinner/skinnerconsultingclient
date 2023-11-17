@@ -5,14 +5,14 @@ import { useWordpressStore } from '@/stores/wordpress'
 const $axios = inject('$axios')
 const wordpress = useWordpressStore()
 
-wordpress.fetchProjects($axios)
+wordpress.fetchData($axios, 'projects')
 
 const projects = computed(() => wordpress.projects)
 
 const pages = computed(() => wordpress.pages)
 
 const page = computed(() => {
-    return pages.value.find((page) => page.slug === 'portfolio')
+    return pages.value.find((page) => page.slug === 'project')
 })
 
 const media = computed(() => wordpress.media)
@@ -24,7 +24,7 @@ function getMediaItem(id) {
 </script>
 
 <template>
-    <section id="portfolio" class="container pt-5 pb-md-5" v-if="page">
+    <section id="projects" class="container pt-5 pb-md-5" v-if="page">
         <h2 class="text-uppercase text-primary mb-5">{{ page.acf.heading }}</h2>
 
         <div class="row mb-5" :class="{ 'flex-md-row-reverse': index % 2 !== 0 }" v-for="(project, index) in projects"

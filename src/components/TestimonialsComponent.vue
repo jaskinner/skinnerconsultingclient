@@ -6,7 +6,7 @@ import QuoteComponent from './QuoteComponent.vue'
 const $axios = inject('$axios')
 const wordpress = useWordpressStore()
 
-wordpress.fetchTestimonials($axios)
+wordpress.fetchData($axios, 'testimonials')
 
 const testimonials = computed(() => wordpress.testimonials)
 

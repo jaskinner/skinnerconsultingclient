@@ -11,47 +11,11 @@ export const useWordpressStore = defineStore('wordpress', {
 		error: null
 	}),
 	actions: {
-		async fetchProjects($axios) {
+		async fetchData($axios, dataset) {
 			try {
-				const { data } = await $axios.get('/portfolio');
+				const { data } = await $axios.get('/' + dataset);
 
-				this.projects = data;
-			} catch (error) {
-				console.log(error)
-			}
-		},
-		async fetchTestimonials($axios) {
-			try {
-				const { data } = await $axios.get('/testimonial');
-
-				this.testimonials = data
-			} catch (error) {
-				console.log(error)
-			}
-		},
-		async fetchServices($axios) {
-			try {
-				const { data } = await $axios.get('/service');
-
-				this.services = data
-			} catch (error) {
-				console.log(error)
-			}
-		},
-		async fetchPages($axios) {
-			try {
-				const { data } = await $axios.get('/pages');
-
-				this.pages = data
-			} catch (error) {
-				console.log(error)
-			}
-		},
-		async fetchMedia($axios) {
-			try {
-				const { data } = await $axios.get('/media');
-
-				this.media = data
+				this[dataset] = data
 			} catch (error) {
 				console.log(error)
 			}
