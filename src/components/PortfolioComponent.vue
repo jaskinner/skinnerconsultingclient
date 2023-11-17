@@ -38,7 +38,7 @@ function getMediaItem(id) {
                     <img
                         v-if="getMediaItem(project.acf.brand)"
                         :src="
-                            'https://db.skinnerconsulting.tech/wp-content/uploads/' +
+                            'https://nyc3.digitaloceanspaces.com/app.skinnerconsulting.tech/wp-content/uploads/' +
                             getMediaItem(project.acf.brand)
                         "
                         alt=""
