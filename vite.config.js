@@ -15,5 +15,12 @@ export default defineConfig({
     server: {
         host: '0.0.0.0',
         port: 3300
+    },
+    build: {
+        cssMinify: true,
+        brotliSize: true,
+        chunkSizeWarningLimit: 500,
+        cssCodeSplit: true,
+        minify: true
     }
 })
