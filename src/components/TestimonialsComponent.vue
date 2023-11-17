@@ -18,16 +18,22 @@ const page = computed(() => {
 </script>
 
 <template>
-    <section id="testimonials" class="container-fluid py-5 text-light bg-primary" v-if="page">
-        <div class="mx-5">
+    <section id="testimonials" class="bg-primary py-5 text-light" v-if="page">
+        <div class="container">
             <h2 class="text-uppercase mb-5">{{ page.acf.heading }}</h2>
 
-            <QuoteComponent
-                v-for="testimonial in testimonials"
-                :key="testimonial.id"
-                :quote="testimonial.acf.quote"
-                :attr="testimonial.acf.attribution"
-            />
+            <div class="row">
+                <div
+                    class="col-12 col-md-6 col-lg-3"
+                    v-for="testimonial in testimonials"
+                    :key="testimonial.id"
+                >
+                    <QuoteComponent
+                        :quote="testimonial.acf.quote"
+                        :attr="testimonial.acf.attribution"
+                    />
+                </div>
+            </div>
         </div>
     </section>
 </template>

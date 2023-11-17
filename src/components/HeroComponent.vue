@@ -13,22 +13,26 @@ const page = computed(() => {
 </script>
 
 <template>
-    <header id="hero" class="text-light bg-primary" v-if="page">
-        <div class="container-fluid py-5">
+    <header id="hero" class="text-light bg-primary mb-5" v-if="page">
+        <div id="hero-top" class="container py-5 pb-md-0">
             <div class="row">
-                <div id="hero-top" class="col-md-6 d-flex flex-column px-5">
+                <div id="hero-top" class="col-md-6 d-flex flex-column">
                     <h1 class="fw-bold lh-base"><TimedGreeting />{{ page.acf.heading }}</h1>
                     <p class="lh-lg">{{ page.acf.body }}</p>
                     <div>
-                        <button class="btn btn-light mt-3 me-3 text-uppercase text-primary">
-                            Get a free quote
+                        <a
+                            href="https://www.upwork.com/freelancers/skinnerconsulting"
+                            class="btn btn-light mt-3 me-3 text-uppercase text-primary"
+                        >
+                            Hire me on Upwork
                             <i class="bi bi-arrow-right-short ps-2"></i>
-                        </button>
-                        <button
+                        </a>
+                        <a
+                            href="https://calendly.com/skinnerconsulting/website-consultation"
                             class="btn mt-3 text-uppercase text-uppercase text-light border border-2"
                         >
-                            My Portfolio <i class="bi bi-arrow-right-short ps-2"></i>
-                        </button>
+                            Schedule a consultation <i class="bi bi-arrow-right-short ps-2"></i>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -57,4 +61,5 @@ const page = computed(() => {
     stroke: #fff;
     stroke-miterlimit: 10;
 }
+
 </style>

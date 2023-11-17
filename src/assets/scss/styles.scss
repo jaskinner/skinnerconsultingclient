@@ -22,3 +22,10 @@
 @import 'bootstrap-icons/font/bootstrap-icons';
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
+
+
+@include media-breakpoint-up(md) {
+	#hero-top {
+		margin-bottom: -50px;
+	}
+}

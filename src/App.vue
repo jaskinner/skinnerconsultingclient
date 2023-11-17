@@ -1,6 +1,5 @@
 <script setup>
 import TestimonialsComponent from './components/TestimonialsComponent.vue'
-import ContactComponent from './components/ContactComponent.vue'
 import HeroComponent from './components/HeroComponent.vue'
 import PortfolioComponent from './components/PortfolioComponent.vue'
 import ServicesComponent from './components/ServicesComponent.vue'
@@ -17,11 +16,8 @@ wordpress.fetchMedia($axios)
 </script>
 
 <template>
-    <!-- <NavbarComponent /> -->
     <main>
         <HeroComponent />
-
-        <!-- <GreetingComponent /> -->
 
         <ServicesComponent />
 
@@ -30,7 +26,5 @@ wordpress.fetchMedia($axios)
         <TestimonialsComponent />
 
         <AboutComponent />
-
-        <ContactComponent />
     </main>
 </template>
