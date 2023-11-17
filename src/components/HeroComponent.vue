@@ -19,7 +19,7 @@ const page = computed(() => {
                 <div id="hero-top" class="col-md-6 d-flex flex-column">
                     <h1 class="fw-bold lh-base"><TimedGreeting />{{ page.acf.heading }}</h1>
                     <p class="lh-lg">{{ page.acf.body }}</p>
-                    <div>
+                    <div class="z-1">
                         <a
                             href="https://www.upwork.com/freelancers/skinnerconsulting"
                             class="btn btn-light mt-3 me-3 text-uppercase text-primary"
