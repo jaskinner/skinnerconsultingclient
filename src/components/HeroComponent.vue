@@ -1,5 +1,5 @@
 <script setup>
-// import TimedGreeting from '../components/TimedGreeting.vue'
+import TimedGreeting from '../components/TimedGreeting.vue'
 import { useWordpressStore } from '@/stores/wordpress'
 import { computed } from 'vue'
 
@@ -17,7 +17,7 @@ const page = computed(() => {
         <div class="container-fluid py-5">
             <div class="row">
                 <div id="hero-top" class="col-md-6 d-flex flex-column px-5">
-                    <h1 class="fw-bold lh-base">{{ page.acf.heading }}</h1>
+                    <h1 class="fw-bold lh-base"><TimedGreeting />{{ page.acf.heading }}</h1>
                     <p class="lh-lg">{{ page.acf.body }}</p>
                     <div>
                         <button class="btn btn-light mt-3 me-3 text-uppercase text-primary">

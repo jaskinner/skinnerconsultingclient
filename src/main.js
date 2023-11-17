@@ -3,7 +3,6 @@ import { createPinia } from 'pinia'
 import axios from "axios";
 
 import App from './App.vue'
-import router from './router'
 
 import './assets/scss/styles.scss'
 
@@ -18,5 +17,4 @@ const app = createApp(App)
 app.use(createPinia())
 
 app.provide('$axios', instance);
-app.use(router)
 app.mount('#app')
