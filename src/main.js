@@ -6,7 +6,6 @@ import App from './App.vue'
 import router from './router'
 
 import './assets/scss/styles.scss'
-import 'bootstrap';
 
 const instance = axios.create({
 	baseURL: 'https://db.skinnerconsulting.tech/wp-json/wp/v2',

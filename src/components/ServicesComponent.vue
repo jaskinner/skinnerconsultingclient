@@ -1,6 +1,17 @@
 <script setup>
-import { computed, inject } from 'vue'
+import { computed, inject, onMounted, ref } from 'vue'
 import { useWordpressStore } from '@/stores/wordpress'
+import { Collapse } from 'bootstrap'
+
+const collapseElement = ref(null)
+
+onMounted(() => {
+    if (collapseElement.value) {
+        new Collapse(collapseElement.value, {
+            toggle: false
+        })
+    }
+})
 
 const $axios = inject('$axios')
 const wordpress = useWordpressStore()

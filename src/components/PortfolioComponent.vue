@@ -64,9 +64,3 @@ function getMediaItem(id) {
         </div>
     </section>
 </template>
-
-<style scoped>
-a span {
-    display: none;
-}
-</style>
