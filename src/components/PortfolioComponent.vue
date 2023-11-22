@@ -31,7 +31,7 @@ function getMediaItem(id) {
             :key="project.id">
             <div class="col-md-6 mt-3 text-center" v-if="media">
                 <img v-if="getMediaItem(project.acf.mockup_image)" :src="
-                    'https://nyc3.digitaloceanspaces.com/app.skinnerconsulting.tech/wp-content/uploads/' +
+                    'https://media.skinnerconsulting.tech/wp-content/uploads/' +
                     getMediaItem(project.acf.mockup_image)
                 " alt="Desktop and mobile view" class="img-fluid" width="888" height="482" />
                 <div v-else>No image available</div>
@@ -40,7 +40,7 @@ function getMediaItem(id) {
                 <div class="row d-flex justify-content-center">
                     <div class="col-6">
                         <img v-if="getMediaItem(project.acf.brand)" :src="
-                            'https://nyc3.digitaloceanspaces.com/app.skinnerconsulting.tech/wp-content/uploads/' +
+                            'https://media.tech/wp-content/uploads/' +
                             getMediaItem(project.acf.brand)
                         " class="img-fluid pb-3" alt="Logo for company" width="400" height="400" />
                         <a class="btn mt-3 text-uppercase text-uppercase text-primary border-primary border border-2"

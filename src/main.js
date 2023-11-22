@@ -8,7 +8,7 @@ import './assets/scss/styles.scss'
 
 const instance = axios.create({
 	baseURL: 'https://db.skinnerconsulting.tech/wp-json/wp/v2',
-	timeout: 1000,
+	timeout: 5000,
 	headers: { 'Content-Type': 'application/json' }
 });
 
