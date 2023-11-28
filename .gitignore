@@ -3,3 +3,6 @@
 /wp/plugins/hello.php
 /wp/themes/index.php
 /wp/themes/twenty*
+dist
+node_modules
+.DS_Store
