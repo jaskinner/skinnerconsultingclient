@@ -19,7 +19,7 @@ const page = computed(() => {
             <img
                 width="317"
                 height="317"
-                src="../assets/images/portrait.jpg"
+                src="../assets/images/portrait.webp"
                 class="img-fluid mb-3 mx-auto"
                 alt=""
             />
