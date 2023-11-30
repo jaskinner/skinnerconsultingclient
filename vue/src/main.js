@@ -7,7 +7,7 @@ import App from './App.vue'
 import './assets/scss/styles.scss'
 
 const instance = axios.create({
-	baseURL: 'http://scwp/wp-json/wp/v2',
+	baseURL: 'https://db.skinnerconsulting.tech/wp-json/wp/v2',
 	timeout: 5000,
 	headers: { 'Content-Type': 'application/json' }
 });

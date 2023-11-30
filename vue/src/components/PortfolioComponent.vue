@@ -31,7 +31,7 @@ function getMediaItem(id) {
     }
     return {
         srcset,
-        alt: item.alt_text || 'Image description', // Fallback alt text if needed
+        alt: item.alt_text || 'Image description',
     };
 }
 

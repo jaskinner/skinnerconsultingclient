@@ -21,10 +21,10 @@ const page = computed(() => {
                     <p class="lh-lg">{{ page.acf.body }}</p>
                     <div class="z-1">
                         <a
-                            href="https://www.upwork.com/freelancers/skinnerconsulting"
+                            href="https://www.linkedin.com/in/jon-a-skinner/"
                             class="btn btn-light mt-3 me-3 text-uppercase text-primary"
                         >
-                            Hire me on Upwork
+                            View my LinkedIn
                             <i class="bi bi-arrow-right-short ps-2"></i>
                         </a>
                         <a

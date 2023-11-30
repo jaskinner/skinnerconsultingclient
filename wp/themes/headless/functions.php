@@ -58,7 +58,7 @@ add_action('init', 'create_project_post_type');
 add_action('init', 'create_testimonial_post_type');
 add_action('init', 'create_service_post_type');
 
-define('WP_POST_REVISIONS', 3);
+// define('WP_POST_REVISIONS', 3);
 
 add_filter('xmlrpc_enabled', '__return_false');
 remove_action('wp_head', 'print_emoji_detection_script', 7);
